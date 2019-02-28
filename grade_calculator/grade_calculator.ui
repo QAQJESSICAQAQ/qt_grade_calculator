@@ -267,6 +267,9 @@
        </item>
        <item>
         <widget class="QSlider" name="horizontalSlider9">
+         <property name="maximum">
+          <number>100</number>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -288,6 +291,9 @@
        </item>
        <item>
         <widget class="QSlider" name="horizontalSlider10">
+         <property name="maximum">
+          <number>100</number>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
@@ -309,6 +315,9 @@
        </item>
        <item>
         <widget class="QSlider" name="horizontalSlider11">
+         <property name="maximum">
+          <number>100</number>
+         </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>

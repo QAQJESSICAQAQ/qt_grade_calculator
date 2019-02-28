@@ -79,10 +79,10 @@ void grade_calculator::compute_overall1(){
     int midterm2 =ui->spinBox10->value();
     int finalexam =ui->spinBox11->value();
     double mid =(midterm1/100.0*20)+(midterm2/100.0*20);
-    double final=finalexam/100.0*20;
+    double final=finalexam/100.0*35;
     grade=hw+mid+final;
 
-    emit ui->label_14->setText(QString::number(grade));
+    ui->label_14->setText(QString::number(grade));
     ui->label_14->repaint();
 
     return;
