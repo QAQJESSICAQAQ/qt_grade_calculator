@@ -47,10 +47,10 @@ grade_calculator::~grade_calculator()
     delete ui;
 }
 
-#include <iostream>>
+#include <iostream>
 
 void grade_calculator::compute_overall1(){
-    std::cout << "compute_overall1 start" << std::endl;
+
     grade=0.0;
     int hw1 =ui->spinBox1->value();
     int hw2 =ui->spinBox2->value();
@@ -60,7 +60,7 @@ void grade_calculator::compute_overall1(){
     int hw6 =ui->spinBox6->value();
     int hw7 =ui->spinBox7->value();
     int hw8 =ui->spinBox8->value();
-    std::cout << "compute_overall1 got hw" << std::endl;
+
     std::vector<int> vec={hw1,hw2,hw3,hw4,hw5,hw6,hw7,hw8};
     int min=hw1;
     for (int i=0;i<8;i++){
@@ -72,19 +72,19 @@ void grade_calculator::compute_overall1(){
         homework+=vec[i];
 
     }
-    std::cout << "compute_overall1 loop 2" << std::endl;
+
     homework-=min;
-    double hw=homework/700.0*25;
+    double hw=homework/140.0*25;
     int midterm1 =ui->spinBox9->value();
     int midterm2 =ui->spinBox10->value();
-    int finalexam= ui->spinBox11->value();
-    double mid =(midterm1*20/100.0)+(midterm2/100.0*20);
-    double final=finalexam*35/100;
+    int finalexam =ui->spinBox11->value();
+    double mid =(midterm1/100.0*20)+(midterm2/100.0*20);
+    double final=finalexam/100.0*20;
     grade=hw+mid+final;
 
     emit ui->label_14->setText(QString::number(grade));
     ui->label_14->repaint();
-    std::cout << "compute_overall1 end grade = " << grade << std::endl;
+
     return;
 }
 
@@ -113,7 +113,7 @@ void grade_calculator::compute_overall2(){
 
     }
     homework-=min;
-    double hw=homework/700.0*25;
+    double hw=homework/140.0*25;
     int midterm1 =ui->spinBox9->value();
     int midterm2 =ui->spinBox10->value();
     int finalexam= ui->spinBox11->value();
@@ -124,7 +124,7 @@ void grade_calculator::compute_overall2(){
     grade=hw+mid+final;
     ui->label_14->setText(QString::number(grade));
     ui->label_14->repaint();
-    std::cout << "compute overall 2, text = " << ui->label_14->text().toStdString()  << std::endl;
+
     return;
 }
 
